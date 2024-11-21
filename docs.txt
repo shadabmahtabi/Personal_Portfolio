@@ -1,0 +1,23 @@
+# Pages
+- Home
+    Navbar / Sidebar
+    Landing Page
+    About Me
+    Projects
+    Get In Touch
+    Footer
+
+- Dashboard
+    Add Projects
+    Add Skills
+    Upload CV
+    Change Profile Pic
+    Change Personal Info
+
+# Requirements
+- nodemailer
+
+
+# APIs
+
+# Others

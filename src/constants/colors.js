@@ -1,0 +1,5 @@
+export const mildWhite = "rgba(240, 248, 255)"
+export const greyBtnColor = "rgb(243, 243, 243)"
+export const textDark = "rgba(0, 0, 0, 0.796)"
+export const blueGreen = "rgb(47, 212, 206)"
+export const purpleBtn = "rgb(131, 52, 235)"
