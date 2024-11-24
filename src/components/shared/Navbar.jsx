@@ -1,16 +1,24 @@
 import { FileCopyOutlined as FileCopyOutlinedIcon, Menu as MenuIcon } from "@mui/icons-material";
 import {
+  Backdrop,
   Box,
   IconButton,
   Toolbar,
   Tooltip,
   Typography
 } from "@mui/material";
-import React from "react";
+import React, { Suspense, useState } from "react";
 import { blueGreen, textDark } from "../../constants/colors";
 import { CurvedButton } from "../styles/StyledComponents";
+import Sidebar from "../dialogs/Sidebar";
 
 const Navbar = () => {
+
+  const [isSidebar, setIsSidebar] = useState(false)
+  const sidebarHandler = () => {
+    setIsSidebar(!isSidebar)
+  }
+
   return (
     <Box sx={{ flexGrow: 1 }} height={"10vh"} id="home">
       <Toolbar
@@ -54,8 +62,14 @@ const Navbar = () => {
           }}>Contact</a>
         </Box>
         <Box display={{ xs: "none", md: "block" }}><CurvedButton>Download CV <FileCopyOutlinedIcon style={{ fontSize: ".9rem" }}/></CurvedButton></Box>
-        <Box display={{ xs: "block", md: "none" }}><IconBtn title={"Menu"} icon={<MenuIcon />}/></Box>
+        <Box display={{ xs: "block", md: "none" }}><IconBtn title={"Menu"} icon={<MenuIcon />} onClick={sidebarHandler}/></Box>
       </Toolbar>
+
+      {isSidebar && (
+        <Suspense fallback={<Backdrop open />}>
+          <Sidebar setIsSidebar={setIsSidebar}/>
+        </Suspense>
+      )}
     </Box>
   );
 };
