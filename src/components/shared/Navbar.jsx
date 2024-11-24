@@ -10,7 +10,7 @@ import {
 import React, { Suspense, useState } from "react";
 import { blueGreen, textDark } from "../../constants/colors";
 import { CurvedButton } from "../styles/StyledComponents";
-import Sidebar from "../dialogs/Sidebar";
+import Sidebar from "../dialogs/Sidebar.jsx";
 
 const Navbar = () => {
 
