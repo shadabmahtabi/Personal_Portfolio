@@ -43,7 +43,7 @@ export const DownloadPurpleButton = styled(Link)({
   alignItems: "center",
   gap: ".5rem",
   fontFamily: "gilroy",
-  fontWeight: "500",
+  fontWeight: "400",
   transition: ".5s",
   "&:hover": {
     backgroundColor: purpleBtn,
@@ -53,7 +53,7 @@ export const DownloadPurpleButton = styled(Link)({
 
 export const NavLinks = styled(Link)({
   width: "80%",
-  height: "10vh",
+  height: "7vh",
   // fontSize: ".9rem",
   cursor: "pointer",
   color: textDark,
@@ -106,6 +106,8 @@ export const Skills = styled(Box)({
   backgroundColor: purpleBtn,
   fontSize: ".85rem",
   borderRadius: "1vh",
+  wordBreak: "break-word",
+
   "&:hover": {
     backgroundColor: purpleBtnHover,
   }

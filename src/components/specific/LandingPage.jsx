@@ -12,7 +12,9 @@ import {
   blueGreen,
   greyBtnColor,
   purpleBtn,
+  purpleBtnHover,
   textDark,
+  white,
 } from "../../constants/colors";
 import { Link } from "react-router-dom";
 import {
@@ -30,13 +32,13 @@ const LandingPage = () => {
     <Box
       width={"100%"}
       height={{
-        xs: "calc(98vh - 8vh)",
-        md: "calc(98vh - 8vh)",
+        xs: "calc(90vh - 8vh)",
+        md: "calc(100vh - 8vh)",
       }}
     >
       <Box
         width={"100%"}
-        height={"92%"}
+        height={"100%"}
         display={"flex"}
         alignItems={"center"}
         justifyContent={{
@@ -70,7 +72,6 @@ const LandingPage = () => {
             alignItems={"flex-start"}
             justifyContent={"center"}
             height={"100%"}
-            // bgcolor={"red"}
           >
             <Button
               variant="contained"
@@ -95,7 +96,7 @@ const LandingPage = () => {
               fontSize={{
                 xs: "3rem",
                 sm: "3.5rem",
-                sm: "4rem",
+                md: "4.5rem",
               }}
             >
               I'm{" "}
@@ -113,30 +114,40 @@ const LandingPage = () => {
               assumenda doloribus exercitationem voluptates.
             </p>
             <Box
+              width={{
+                xs: "100%",
+                md: "40vw",
+              }}
               display={"flex"}
+              justifyContent={{
+                xs: "center",
+                sm: "flex-start"
+              }}
               gap={{
                 xs: "2vh",
                 sm: "1vw",
               }}
             >
-              <Link
+              <Box
+                component={Link}
                 to={"/about"}
-                style={{
+                sx={{
                   textDecoration: "none",
-                  color: "inherit",
                   backgroundColor: purpleBtn,
-                  color: "#fff",
+                  color: white,
                   padding: "1vh 3vh",
                   borderRadius: "1vh",
+                  fontFamily: "Gilroy",
+                  fontWeight: "400",
+                  transition: "background-color 0.3s",
 
-                  "&::hover": {
-                    backgroundColor: greyBtnColor,
-                    color: textDark,
+                  "&:hover": {
+                    backgroundColor: purpleBtnHover,
                   },
                 }}
               >
                 Hire Me
-              </Link>
+              </Box>
               <DownloadPurpleButton to={"/about"}>
                 Download CV{" "}
                 <FileCopyOutlinedIcon style={{ fontSize: ".9rem" }} />
@@ -175,7 +186,7 @@ const LandingPage = () => {
           }}
           width={{
             xs: "100%",
-            md: "35%",
+            md: "45%",
           }}
           position={"relative"}
           display={"flex"}
@@ -185,11 +196,11 @@ const LandingPage = () => {
           <Box
             width={{
               xs: "400px",
-              md: "450px",
+              md: "100%",
             }}
             height={{
               xs: "400px",
-              md: "450px",
+              md: "100%",
             }}
           >
             <img
@@ -205,11 +216,11 @@ const LandingPage = () => {
           <Box
             width={{
               xs: "300px",
-              md: "400px",
+              md: "500px",
             }}
             height={{
               xs: "300px",
-              md: "400px",
+              md: "500px",
             }}
             sx={{
               position: "absolute",
@@ -230,10 +241,13 @@ const LandingPage = () => {
           </Box>
         </Box>
       </Box>
-      <Box
+      {/* <Box
         width={"100%"}
         height={"8%"}
-        display={"flex"}
+        display={{
+          xs: "none",
+          sm: "flex"
+        }}
         // alignItems={"center"}
         justifyContent={"center"}
       >
@@ -258,7 +272,7 @@ const LandingPage = () => {
         >
           Scroll Down <MouseIcon />
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
@@ -268,7 +282,7 @@ const IconBtn = ({ title, icon }) => {
     <Tooltip title={title}>
       <IconButton
         color="inherit"
-        size="small"
+        size={"small"}
         sx={{
           color: textDark,
           // bgcolor: greyBtnColor,

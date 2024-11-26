@@ -35,7 +35,7 @@ const Navbar = () => {
           }
         }}
       >
-        <Typography variant="h6" color={blueGreen} sx={{
+        <Typography variant="h6" color={blueGreen} fontFamily={"Gilroy"} sx={{
           userSelect: "none"
         }}>
           Shadab Mahtabi.
@@ -53,7 +53,7 @@ const Navbar = () => {
             color: textDark
           }}>About</a>
           <a href="#projects" style={{
-            textDecoration: "none", 
+            textDecoration: "none",
             color: textDark
           }}>Projects</a>
           <a href="#contact" style={{

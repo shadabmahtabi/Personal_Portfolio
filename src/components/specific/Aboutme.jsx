@@ -7,42 +7,74 @@ import { Skills, SkillsBox } from "../styles/StyledComponents";
 
 const Aboutme = () => {
   return (
-    <Box width={"100%"} height={{
-      xs: "100vh",
-      md: "60vh"
-    }} id="about" fontFamily={"Gilroy"}>
+    <Box
+      width={"100%"}
+      minHeight={{
+        xs: "100vh",
+        sm: "0vh",
+      }}
+      maxHeight={{
+        xs: "150vh",
+        md: "150vh",
+      }}
+      id="about"
+      fontFamily={"Gilroy"}
+      padding={{
+        xs: "4vh 0",
+        md: "2vh 0 4vh 0",
+      }}
+      display={"flex"}
+      alignItems={"center"}
+      flexDirection={"column"}
+      gap={"4vh"}
+    >
       <Typography
         variant="h4"
-        width={"100%"}
+        // width={"100%"}
         // bgcolor={"grey"}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
         fontFamily={"inherit"}
+        sx={{
+          position: "relative",
+          padding: "0 1vh",
+
+          "&::after": {
+            content: '""',
+            position: "absolute",
+            bottom: "0%",
+            left: "0%",
+            width: "100%",
+            height: "3px",
+            backgroundColor: purpleBtn,
+            borderRadius: "1vh"
+          }
+        }}
       >
         About Me
       </Typography>
       <Box
         width={"100%"}
-        height={"90%"}
+        height={"80%"}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
         flexDirection={{
           xs: "column",
-          md: "row"
+          md: "row",
         }}
         gap={{
-          xs: "2vh",
+          xs: "3vh",
           md: "2vw",
         }}
       >
         <Box
           width={{
-            xs: "90%",
+            xs: "95%",
             md: "45%",
           }}
-          maxHeight={"90%"}
+          height={"90%"}
           bgcolor={lightWhite}
           borderRadius={"2vh"}
           display={"flex"}
@@ -50,7 +82,7 @@ const Aboutme = () => {
           alignItems={"center"}
           justifyContent={"center"}
           gap={"2vh"}
-          padding={"2vw"}
+          padding={"2vh"}
           boxShadow={"2px 2px 5px #e0e0e0"}
         >
           <Typography
@@ -72,7 +104,8 @@ const Aboutme = () => {
             developing scalable and efficient front-end solutions using React,
             Redux, and other popular libraries and frameworks. I have also
             worked with various UI/UX tools and technologies to create visually
-            appealing and user-friendly interfaces. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, corporis.
+            appealing and user-friendly interfaces. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quasi, corporis.
           </Typography>
           <DownloadPurpleButton
             to={"/about"}
@@ -85,21 +118,21 @@ const Aboutme = () => {
         </Box>
         <Box
           width={{
-            xs: "90%",
+            xs: "95%",
             md: "45%",
           }}
-          height={{
+          minHeight={{
             xs: "45%",
             md: "90%",
           }}
-          bgcolor={lightWhite}
+          // bgcolor={lightWhite}
           borderRadius={"2vh"}
-          boxShadow={"2px 2px 5px #e0e0e0"}
+          // boxShadow={"2px 2px 5px #e0e0e0"}
           display={"flex"}
           justifyContent={"space-between"}
           padding={{
-            xs: "2vh",
-            md: "1vw 2vw"
+            xs: "1vh",
+            md: "1vw 2vw",
           }}
         >
           <Box height={"100%"} width={"30%"}>
@@ -109,7 +142,7 @@ const Aboutme = () => {
               fontFamily={"Gilroy"}
               color="initial"
               height={{
-                xs: "15%",
+                xs: "5vh",
                 md: "13%",
               }}
             >
@@ -134,7 +167,7 @@ const Aboutme = () => {
               fontFamily={"Gilroy"}
               color="initial"
               height={{
-                xs: "15%",
+                xs: "5vh",
                 md: "13%",
               }}
             >
@@ -161,7 +194,7 @@ const Aboutme = () => {
               fontFamily={"Gilroy"}
               color="initial"
               height={{
-                xs: "15%",
+                xs: "5vh",
                 md: "13%",
               }}
             >
