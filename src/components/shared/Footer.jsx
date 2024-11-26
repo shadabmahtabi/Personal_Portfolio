@@ -1,14 +1,17 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
-import { textDark } from "../../constants/colors";
+import { blueGreen, textDark } from "@/constants/colors";
 
 const Footer = () => {
   return (
     <Box display={"flex"} alignItems={"center"} justifyContent={"center"} flexDirection={"column"} height={"15vh"} gap={"1vh"}>
-      <Typography variant="h5" color="initial">
+      <Typography variant="h5" color={blueGreen} fontFamily={"Gilroy"}>
         Shadab Mahtabi.
       </Typography>
-      <Box display={"flex"} gap={"1vw"}>
+      <Box display={"flex"} gap={{
+        xs: "2vh",
+        md: "1vw",
+      }}>
           <a href="#home" style={{
             textDecoration: "none", 
             color: textDark

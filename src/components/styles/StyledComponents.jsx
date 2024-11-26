@@ -6,7 +6,7 @@ import {
   purpleBtnHover,
   textDark,
   white,
-} from "../../constants/colors";
+} from "@/constants/colors";
 import { Link } from "react-router-dom";
 
 export const CurvedButton = styled("button")({
@@ -112,3 +112,12 @@ export const Skills = styled(Box)({
     backgroundColor: purpleBtnHover,
   }
 });
+
+export const InputBox = styled('input')({
+  width: "100%",
+  height: "100%",
+  border: "none",
+  outline: "none",
+  padding: "0 3rem",
+  borderRadius: "1.5rem",
+})

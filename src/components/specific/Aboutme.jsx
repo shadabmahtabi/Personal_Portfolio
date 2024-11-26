@@ -29,7 +29,7 @@ const Aboutme = () => {
       gap={"4vh"}
     >
       <Typography
-        variant="h4"
+        variant="h5"
         // width={"100%"}
         // bgcolor={"grey"}
         display={"flex"}
@@ -58,7 +58,10 @@ const Aboutme = () => {
         width={"100%"}
         height={"80%"}
         display={"flex"}
-        alignItems={"center"}
+        alignItems={{
+          xs: "center",
+          md: "flex-start"
+        }}
         justifyContent={"center"}
         flexDirection={{
           xs: "column",
@@ -86,10 +89,10 @@ const Aboutme = () => {
           boxShadow={"2px 2px 5px #e0e0e0"}
         >
           <Typography
-            variant="h5"
+            variant="h6"
             color={"#000"}
             fontFamily={"inherit"}
-            fontWeight={"400"}
+            fontWeight={"500"}
           >
             My Introduction
           </Typography>

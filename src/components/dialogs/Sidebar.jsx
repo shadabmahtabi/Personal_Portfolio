@@ -1,8 +1,8 @@
-import { Dialog, Drawer, Stack, Typography } from "@mui/material";
-import React from "react";
-import { DownloadPurpleButton, NavLinks } from "../styles/StyledComponents";
-import { blueGreen } from "../../constants/colors";
+import { DownloadPurpleButton, NavLinks } from "@/components/styles/StyledComponents.jsx";
+import { blueGreen } from "@/constants/colors.js";
 import { FileCopyOutlined as FileCopyOutlinedIcon } from "@mui/icons-material";
+import { Drawer, Stack, Typography } from "@mui/material";
+import React from "react";
 
 const Sidebar = ({ setIsSidebar }) => {
   return (
