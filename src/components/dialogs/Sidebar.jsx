@@ -25,29 +25,10 @@ const Sidebar = ({ setIsSidebar }) => {
         height={"90vh"}
         gap={"2vh"}
         alignItems={"center"}
-        paddingTop={"1vh"}
+        padding={"3vh"}
       >
         <Box
-          sx={{
-            width: "80%",
-            height: "7vh",
-            cursor: "pointer",
-            color: textDark,
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: ".5rem",
-            fontFamily: "gilroy",
-            fontWeight: "500",
-            transition: ".5s",
-            borderRadius: "1vh",
-            fontSize: "1.3rem",
-            "&:hover": {
-              backgroundColor: purpleBtn,
-              color: white,
-            },
-          }}
+          sx={linkBoxStyles}
         >
           <a
             href={"#home"}
@@ -58,26 +39,7 @@ const Sidebar = ({ setIsSidebar }) => {
           </a>
         </Box>
         <Box
-          sx={{
-            width: "80%",
-            height: "7vh",
-            cursor: "pointer",
-            color: textDark,
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: ".5rem",
-            fontFamily: "gilroy",
-            fontWeight: "500",
-            transition: ".5s",
-            borderRadius: "1vh",
-            fontSize: "1.3rem",
-            "&:hover": {
-              backgroundColor: purpleBtn,
-              color: white,
-            },
-          }}
+          sx={linkBoxStyles}
         >
           <a
             href={"#about"}
@@ -88,26 +50,7 @@ const Sidebar = ({ setIsSidebar }) => {
           </a>
         </Box>
         <Box
-          sx={{
-            width: "80%",
-            height: "7vh",
-            cursor: "pointer",
-            color: textDark,
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: ".5rem",
-            fontFamily: "gilroy",
-            fontWeight: "500",
-            transition: ".5s",
-            borderRadius: "1vh",
-            fontSize: "1.3rem",
-            "&:hover": {
-              backgroundColor: purpleBtn,
-              color: white,
-            },
-          }}
+          sx={linkBoxStyles}
         >
           <a
             href={"#projects"}
@@ -118,26 +61,7 @@ const Sidebar = ({ setIsSidebar }) => {
           </a>
         </Box>
         <Box
-          sx={{
-            width: "80%",
-            height: "7vh",
-            cursor: "pointer",
-            color: textDark,
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: ".5rem",
-            fontFamily: "gilroy",
-            fontWeight: "500",
-            transition: ".5s",
-            borderRadius: "1vh",
-            fontSize: "1.3rem",
-            "&:hover": {
-              backgroundColor: purpleBtn,
-              color: white,
-            },
-          }}
+          sx={linkBoxStyles}
         >
           <a
             href={"#contact"}
@@ -147,7 +71,9 @@ const Sidebar = ({ setIsSidebar }) => {
             Contact
           </a>
         </Box>
-        <DownloadPurpleButton to={"/about"} onClick={DownloadResume}>
+        <DownloadPurpleButton to={"/about"} onClick={DownloadResume} sx={{
+          marginTop: "auto"
+        }}>
           Download CV <FileCopyOutlinedIcon style={{ fontSize: ".9rem" }} />
         </DownloadPurpleButton>
       </Stack>
@@ -164,5 +90,26 @@ let linkStyles = {
   alignItems: "center",
   justifyContent: "center",
 };
+
+let linkBoxStyles = {
+  width: "80%",
+  height: "7vh",
+  cursor: "pointer",
+  color: textDark,
+  textDecoration: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: ".5rem",
+  fontFamily: "gilroy",
+  fontWeight: "500",
+  transition: ".5s",
+  borderRadius: "1vh",
+  fontSize: "1.3rem",
+  "&:hover": {
+    backgroundColor: purpleBtn,
+    color: white,
+  },
+}
 
 export default Sidebar;

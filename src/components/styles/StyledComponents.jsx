@@ -22,7 +22,7 @@ export const CurvedButton = styled("button")({
   justifyContent: "center",
   gap: ".5rem",
   fontFamily: "gilroy",
-  fontWeight: "500",
+  // fontWeight: "500",
   transition: ".5s",
   "&:hover": {
     backgroundColor: purpleBtn,
@@ -145,7 +145,7 @@ export const InputBox = styled('input')({
 
 export const ProjectLinks = styled(Link)({
   cursor: "pointer",
-  // color: textDark,
+  color: "inherit",
   textDecoration: "underline",
   display: "flex",
   alignItems: "center",
@@ -156,9 +156,10 @@ export const ProjectLinks = styled(Link)({
   transition: ".5s",
   borderRadius: "1vh",
   fontSize: "1rem",
+  transitionDuration: ".1s",
   
   "&:hover": {
-    backgroundColor: purpleBtn,
+    // backgroundColor: purpleBtn,
     color: white,
   },
 });

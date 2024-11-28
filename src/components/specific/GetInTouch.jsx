@@ -2,13 +2,9 @@ import { purpleBtn, textDark, white } from "@/constants/colors";
 import {
   EmailOutlined as EmailOutlinedIcon,
   PhoneOutlined as PhoneOutlinedIcon,
-  TurnRightRounded as TurnRightRoundedIcon
+  TurnRightRounded as TurnRightRoundedIcon,
 } from "@mui/icons-material";
-import {
-  Box,
-  Paper,
-  Typography
-} from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
 import ContactForm from "@/components/Forms/ContactForm";
 
@@ -36,8 +32,6 @@ const GetInTouch = () => {
     >
       <Typography
         variant="h5"
-        // width={"100%"}
-        // bgcolor={"grey"}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
@@ -89,7 +83,7 @@ const GetInTouch = () => {
         marginTop={"3vh"}
       >
         <Paper
-          elevation={3}
+          elevation={2}
           variant="elevation"
           sx={{
             width: {
@@ -110,15 +104,34 @@ const GetInTouch = () => {
             overflow: "hidden",
             transition: "background-color 0.3s, color 0.5s",
 
-            "&:hover": {
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "0%",
               backgroundColor: purpleBtn,
+              zIndex: 0,
+              transition: "height 0.4s ease-in-out",
+            },
+
+            "&:hover::before": {
+              height: "100%",
+            },
+
+            "& > *": {
+              zIndex: 1,
+            },
+
+            "&:hover": {
               color: white,
             },
           }}
         >
           <Typography
             variant="h5"
-            fontWeight={"600"}
+            fontWeight={"500"}
             fontFamily={"Gilroy"}
             marginBottom={"1vh"}
           >
@@ -126,7 +139,7 @@ const GetInTouch = () => {
             <TurnRightRoundedIcon
               sx={{
                 rotate: "90deg",
-                fontWeight: "600",
+                fontWeight: "500",
               }}
             />
           </Typography>
@@ -138,13 +151,12 @@ const GetInTouch = () => {
           </Typography>
         </Paper>
         <Paper
-          elevation={3}
+          elevation={2}
           variant="elevation"
           sx={{
             width: {
               xs: "100%",
               md: "50%",
-              lg: "40%",
             },
             height: {
               xs: "60vh",

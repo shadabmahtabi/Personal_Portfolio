@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
 import { DownloadPurpleButton } from "@/components/styles/StyledComponents";
 import { FileCopyOutlined as FileCopyOutlinedIcon } from "@mui/icons-material";
@@ -73,21 +73,27 @@ const Aboutme = () => {
           md: "2vw",
         }}
       >
-        <Box
-          width={{
-            xs: "95%",
-            md: "45%",
+        <Paper
+          elevation={2}
+          variant="elevation"
+          sx={{
+            width: {
+              xs: "95%",
+              md: "45%",
+            },
+            height: {
+              xs: "50%",
+              md: "90%",
+            },
+            padding: "2vh",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "2vh",
+            position: "relative",
+            overflow: "hidden",
           }}
-          height={"90%"}
-          bgcolor={lightWhite}
-          borderRadius={"2vh"}
-          display={"flex"}
-          flexDirection={"column"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          gap={"2vh"}
-          padding={"2vh"}
-          boxShadow={"2px 2px 5px #e0e0e0"}
         >
           <Typography
             variant="h6"
@@ -119,7 +125,7 @@ const Aboutme = () => {
           >
             Download CV <FileCopyOutlinedIcon style={{ fontSize: ".9rem" }} />
           </DownloadPurpleButton>
-        </Box>
+        </Paper>
         <Box
           width={{
             xs: "95%",

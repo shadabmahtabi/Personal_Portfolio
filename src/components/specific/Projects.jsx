@@ -1,7 +1,11 @@
-import { CardTravelRounded as CardTravelRoundedIcon, GroupRounded as GroupRoundedIcon, LinkOutlined as LinkOutlinedIcon, StarRounded as StarRoundedIcon } from "@mui/icons-material";
-import { Box, Paper, Typography } from "@mui/material";
-import { blueGreen, purpleBtn, white } from "@/constants/colors";
-import { ProjectLinks } from "@/components/styles/StyledComponents";
+import ProjectCard from "@/components/shared/ProjectCard";
+import { blueGreen, purpleBtn } from "@/constants/colors";
+import {
+  CardTravelRounded as CardTravelRoundedIcon,
+  GroupRounded as GroupRoundedIcon,
+  StarRounded as StarRoundedIcon
+} from "@mui/icons-material";
+import { Box, Typography } from "@mui/material";
 
 const Projects = () => {
   return (
@@ -14,7 +18,7 @@ const Projects = () => {
       maxHeight={{
         xs: "150vh",
         md: "60vh",
-        lg: "80vh"
+        lg: "80vh",
       }}
       fontFamily={"Gilroy"}
       padding={{
@@ -29,8 +33,6 @@ const Projects = () => {
     >
       <Typography
         variant="h5"
-        // width={"100%"}
-        // bgcolor={"grey"}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
@@ -68,114 +70,45 @@ const Projects = () => {
         justifyContent={"center"}
         gap={"2vw"}
       >
-        <Paper
-          elevation={3}
-          variant="elevation"
-          sx={{
-            width: {
-              xs: "100%",
-              md: "30%",
-            },
-            height: {
-              xs: "50%",
-              md: "100%",
-            },
-            padding: "2vh",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "1vh",
-            position: "relative",
-            overflow: "hidden",
-            transition: "background-color 0.3s, color 0.5s",
-
-            "&:hover": {
-              backgroundColor: purpleBtn,
-              color: white,
-            },
-          }}
-        >
-          <CardTravelRoundedIcon sx={{
-            fontSize: "3rem",
-            color: blueGreen
-          }}/>
-          <Typography variant="h4">Completed</Typography>
-          <Typography variant="body2">15+ Completed Projects</Typography>
-          <ProjectLinks to={"/"}>View All <LinkOutlinedIcon /></ProjectLinks>
-        </Paper>
-        <Paper
-          elevation={3}
-          variant="elevation"
-          sx={{
-            width: {
-              xs: "100%",
-              md: "30%",
-            },
-            height: {
-              xs: "50%",
-              md: "100%",
-            },
-            padding: "2vh",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "1vh",
-            position: "relative",
-            overflow: "hidden",
-            transition: "background-color 0.3s, color 0.5s",
-
-            "&:hover": {
-              backgroundColor: purpleBtn,
-              color: white,
-            },
-          }}
-        >
-          <GroupRoundedIcon sx={{
-            fontSize: "3rem",
-            color: blueGreen
-          }}/>
-          <Typography variant="h4">Clients</Typography>
-          <Typography variant="body2">50+ Happy Clients</Typography>
-          <ProjectLinks to={"/"}>View All <LinkOutlinedIcon /></ProjectLinks>
-        </Paper>
-        <Paper
-          elevation={3}
-          variant="elevation"
-          sx={{
-            width: {
-              xs: "100%",
-              md: "30%",
-            },
-            height: {
-              xs: "50%",
-              md: "100%",
-            },
-            padding: "2vh",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "1vh",
-            position: "relative",
-            overflow: "hidden",
-            transition: "background-color 0.3s, color 0.5s",
-
-            "&:hover": {
-              backgroundColor: purpleBtn,
-              color: white,
-            },
-          }}
-        >
-          <StarRoundedIcon sx={{
-            fontSize: "3rem",
-            color: blueGreen
-          }}/>
-          <Typography variant="h4">Experienced</Typography>
-          <Typography variant="body2">5+ Years Of Experienced</Typography>
-          <ProjectLinks to={"/"}>View All <LinkOutlinedIcon /></ProjectLinks>
-        </Paper>
+        <ProjectCard
+          icon={
+            <CardTravelRoundedIcon
+              sx={{
+                fontSize: "3rem",
+                color: blueGreen,
+              }}
+            />
+          }
+          title={"Completed"}
+          desc={"15+ Completed Projects"}
+          link={"/projects"}
+        />
+        <ProjectCard
+          icon={
+            <GroupRoundedIcon
+              sx={{
+                fontSize: "3rem",
+                color: blueGreen,
+              }}
+            />
+          }
+          title={"Clients"}
+          desc={"50+ Happy Clients"}
+          link={"/clients"}
+        />
+        <ProjectCard
+          icon={
+            <StarRoundedIcon
+              sx={{
+                fontSize: "3rem",
+                color: blueGreen,
+              }}
+            />
+          }
+          title={"Experienced"}
+          desc={"5+ Years Of Experienced"}
+          link={"/experience"}
+        />
       </Box>
     </Box>
   );

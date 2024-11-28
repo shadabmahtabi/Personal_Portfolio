@@ -8,7 +8,7 @@ const Applayout = () => (WrappedComponent) => {
       <div style={{
         fontFamily: "Gilroy"
       }}>
-        {/* <Title /> */}
+        <Title />
         <Navbar />
         <WrappedComponent {...props} />
         <Footer />

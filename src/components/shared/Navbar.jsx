@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { Suspense, useState } from "react";
-import { blueGreen, textDark } from "@/constants/colors";
+import { blueGreen, textDark, purpleBtn } from "@/constants/colors";
 import { CurvedButton } from "@/components/styles/StyledComponents";
 import Sidebar from "@/components/dialogs/Sidebar.jsx";
 import { DownloadResume } from "@/utils/feature";
@@ -53,44 +53,166 @@ const Navbar = () => {
             xs: "none",
             md: "flex",
           }}
-          gap={"1vw"}
+          gap={"1.5vw"}
         >
-          <a
-            href="#home"
-            style={{
-              textDecoration: "none",
-              color: textDark,
+          <Box
+            sx={{
+              fontWeight: "500",
+              opacity: 0.7,
+              transition: ".3s",
+              position: "relative",
+              padding: "0 .5vw",
+              
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                bottom: "0",
+                left: "0",
+                height: "2px",
+                width: "0%",
+                borderRadius: "10px",
+                backgroundColor: purpleBtn,
+                transition: "width .3s",
+              },
+
+              "&:hover::after": {
+                width: "100%"
+              },
+
+              "&:hover": {
+                opacity: 1,
+              },
             }}
           >
-            Home
-          </a>
-          <a
-            href="#about"
-            style={{
-              textDecoration: "none",
-              color: textDark,
+            <a
+              href="#home"
+              style={{
+                textDecoration: "none",
+                color: textDark,
+              }}
+            >
+              Home
+            </a>
+          </Box>
+          <Box
+            sx={{
+              fontWeight: "500",
+              opacity: 0.7,
+              transition: ".3s",
+              position: "relative",
+              padding: "0 .5vw",
+              
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                bottom: "0",
+                left: "0",
+                height: "2px",
+                width: "0%",
+                borderRadius: "10px",
+                backgroundColor: purpleBtn,
+                transition: "width .3s",
+              },
+
+              "&:hover::after": {
+                width: "100%"
+              },
+
+              "&:hover": {
+                opacity: 1,
+              },
             }}
           >
-            About
-          </a>
-          <a
-            href="#projects"
-            style={{
-              textDecoration: "none",
-              color: textDark,
+            <a
+              href="#about"
+              style={{
+                textDecoration: "none",
+                color: textDark,
+              }}
+            >
+              About
+            </a>
+          </Box>
+          <Box
+            sx={{
+              fontWeight: "500",
+              opacity: 0.7,
+              transition: ".3s",
+              position: "relative",
+              padding: "0 .5vw",
+              
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                bottom: "0",
+                left: "0",
+                height: "2px",
+                width: "0%",
+                borderRadius: "10px",
+                backgroundColor: purpleBtn,
+                transition: "width .3s",
+              },
+
+              "&:hover::after": {
+                width: "100%"
+              },
+
+              "&:hover": {
+                opacity: 1,
+              },
             }}
           >
-            Projects
-          </a>
-          <a
-            href="#contact"
-            style={{
-              textDecoration: "none",
-              color: textDark,
+            <a
+              href="#projects"
+              style={{
+                textDecoration: "none",
+                color: textDark,
+                fontWeight: "500",
+              }}
+            >
+              Projects
+            </a>
+          </Box>
+          <Box
+            sx={{
+              fontWeight: "500",
+              opacity: 0.7,
+              transition: ".3s",
+              position: "relative",
+              padding: "0 .5vw",
+              
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                bottom: "0",
+                left: "0",
+                height: "2px",
+                width: "0%",
+                borderRadius: "10px",
+                backgroundColor: purpleBtn,
+                transition: "width .3s",
+              },
+
+              "&:hover::after": {
+                width: "100%"
+              },
+
+              "&:hover": {
+                opacity: 1,
+              },
             }}
           >
-            Contact
-          </a>
+            <a
+              href="#contact"
+              style={{
+                textDecoration: "none",
+                color: textDark,
+                fontWeight: "500",
+              }}
+            >
+              Contact
+            </a>
+          </Box>
         </Box>
         <Box display={{ xs: "none", md: "block" }}>
           <CurvedButton onClick={DownloadResume}>

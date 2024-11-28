@@ -1,5 +1,5 @@
-import me from "@/assets/me.png";
-import splash from "@/assets/splash.png";
+import me from "@/assets/me.webp";
+import splash from "@/assets/splash.webp";
 import { DownloadPurpleButton } from "@/components/styles/StyledComponents";
 import {
   blueGreen,
