@@ -1,9 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { DownloadPurpleButton } from "../styles/StyledComponents";
+import { DownloadPurpleButton } from "@/components/styles/StyledComponents";
 import { FileCopyOutlined as FileCopyOutlinedIcon } from "@mui/icons-material";
-import { lightWhite, mildWhite, purpleBtn } from "../../constants/colors";
-import { Skills, SkillsBox } from "../styles/StyledComponents";
+import { lightWhite, mildWhite, purpleBtn } from "@/constants/colors";
+import { Skills, SkillsBox } from "@/components/styles/StyledComponents";
+import { DownloadResume } from "@/utils/feature";
 
 const Aboutme = () => {
   return (
@@ -48,8 +49,8 @@ const Aboutme = () => {
             width: "100%",
             height: "3px",
             backgroundColor: purpleBtn,
-            borderRadius: "1vh"
-          }
+            borderRadius: "1vh",
+          },
         }}
       >
         About Me
@@ -60,7 +61,7 @@ const Aboutme = () => {
         display={"flex"}
         alignItems={{
           xs: "center",
-          md: "flex-start"
+          md: "flex-start",
         }}
         justifyContent={"center"}
         flexDirection={{
@@ -111,7 +112,7 @@ const Aboutme = () => {
             consectetur adipisicing elit. Quasi, corporis.
           </Typography>
           <DownloadPurpleButton
-            to={"/about"}
+            onClick={ DownloadResume }
             style={{
               marginLeft: "auto",
             }}

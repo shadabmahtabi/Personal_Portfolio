@@ -1,6 +1,6 @@
-import Footer from "../shared/Footer.jsx";
-import Navbar from "../shared/Navbar.jsx";
-import Title from "../shared/Title.jsx";
+import Footer from "@/components/shared/Footer.jsx";
+import Navbar from "@/components/shared/Navbar.jsx";
+import Title from "@/components/shared/Title.jsx";
 
 const Applayout = () => (WrappedComponent) => {
   return (props) => {

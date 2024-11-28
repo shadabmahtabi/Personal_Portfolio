@@ -1,3 +1,21 @@
+import me from "@/assets/me.png";
+import splash from "@/assets/splash.png";
+import { DownloadPurpleButton } from "@/components/styles/StyledComponents";
+import {
+  blueGreen,
+  purpleBtn,
+  purpleBtnHover,
+  textDark,
+  white
+} from "@/constants/colors";
+import { DownloadResume } from "@/utils/feature";
+import {
+  FileCopyOutlined as FileCopyOutlinedIcon,
+  GitHub as GitHubIcon,
+  Instagram as InstagramIcon,
+  LinkedIn as LinkedInIcon,
+  Twitter as TwitterIcon
+} from "@mui/icons-material";
 import {
   Box,
   Button,
@@ -6,26 +24,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import me from "../../assets/me.png";
-import splash from "../../assets/splash.png";
-import {
-  blueGreen,
-  greyBtnColor,
-  purpleBtn,
-  purpleBtnHover,
-  textDark,
-  white,
-} from "../../constants/colors";
 import { Link } from "react-router-dom";
-import {
-  FileCopyOutlined as FileCopyOutlinedIcon,
-  GitHub as GitHubIcon,
-  Instagram as InstagramIcon,
-  LinkedIn as LinkedInIcon,
-  Mouse as MouseIcon,
-  Twitter as TwitterIcon,
-} from "@mui/icons-material";
-import { DownloadPurpleButton } from "../styles/StyledComponents";
 
 const LandingPage = () => {
   return (
@@ -121,7 +120,7 @@ const LandingPage = () => {
               display={"flex"}
               justifyContent={{
                 xs: "center",
-                sm: "flex-start"
+                sm: "flex-start",
               }}
               gap={{
                 xs: "2vh",
@@ -148,7 +147,7 @@ const LandingPage = () => {
               >
                 Hire Me
               </Box>
-              <DownloadPurpleButton to={"/about"}>
+              <DownloadPurpleButton onClick={DownloadResume}>
                 Download CV{" "}
                 <FileCopyOutlinedIcon style={{ fontSize: ".9rem" }} />
               </DownloadPurpleButton>

@@ -2,18 +2,15 @@ import { purpleBtn, textDark, white } from "@/constants/colors";
 import {
   EmailOutlined as EmailOutlinedIcon,
   PhoneOutlined as PhoneOutlinedIcon,
-  SendRounded as SendRoundedIcon,
   TurnRightRounded as TurnRightRoundedIcon
 } from "@mui/icons-material";
 import {
   Box,
-  Button,
   Paper,
-  TextField,
   Typography
 } from "@mui/material";
 import React from "react";
-import { purpleBtnHover } from "../../constants/colors";
+import ContactForm from "@/components/Forms/ContactForm";
 
 const GetInTouch = () => {
   return (
@@ -146,7 +143,8 @@ const GetInTouch = () => {
           sx={{
             width: {
               xs: "100%",
-              md: "40%",
+              md: "50%",
+              lg: "40%",
             },
             height: {
               xs: "60vh",
@@ -154,78 +152,7 @@ const GetInTouch = () => {
             },
           }}
         >
-          <form
-            style={{
-              height: "100%",
-              width: "100%",
-              display: "flex",
-            }}
-          >
-            <Box
-              height={"100%"}
-              width={"80%"}
-              display={"flex"}
-              flexDirection={"column"}
-              alignItems={"center"}
-              justifyContent={"center"}
-              gap={{
-                xs: "1vh",
-                md: "3vh",
-              }}
-              padding={{
-                xs: "2vh",
-                md: "0 10vh"
-              }}
-            >
-              <Box width={"100%"} display={"inline-flex"} gap={"1vh"}>
-                <TextField label="Name" sx={{
-                  flexGrow: 1
-                }}/>
-                <TextField label="Email" sx={{
-                  flexGrow: 1
-                }}/>
-              </Box>
-              <TextField
-                label="Title"
-                sx={{
-                  width: "100%",
-                }}
-              />
-              <TextField
-                multiline
-                rows={4}
-                label="Description"
-                sx={{
-                  width: "100%",
-                }}
-              />
-            </Box>
-            <Button
-              variant="contained"
-              sx={{
-                display: "inline-flex",
-                gap: "2vh",
-                marginLeft: "auto",
-                backgroundColor: purpleBtn,
-
-                "&:hover": {
-                  backgroundColor: purpleBtnHover,
-                },
-              }}
-            >
-              <Typography variant="body1" sx={{
-                display: {
-                  xs: "none",
-                  md: "inline"
-                }
-              }}>Send</Typography>
-              <SendRoundedIcon
-                sx={{
-                  rotate: "-45deg",
-                }}
-              />
-            </Button>
-          </form>
+          <ContactForm />
         </Paper>
       </Box>
     </Box>

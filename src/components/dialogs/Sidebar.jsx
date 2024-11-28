@@ -1,12 +1,9 @@
-import {
-  DownloadPurpleButton,
-  NavLinks,
-} from "@/components/styles/StyledComponents.jsx";
+import { DownloadPurpleButton } from "@/components/styles/StyledComponents.jsx";
+import { purpleBtn, textDark, white } from "@/constants/colors";
 import { blueGreen } from "@/constants/colors.js";
 import { FileCopyOutlined as FileCopyOutlinedIcon } from "@mui/icons-material";
 import { Box, Drawer, Stack, Typography } from "@mui/material";
-import React from "react";
-import { purpleBtn, textDark, white } from "../../constants/colors";
+import { DownloadResume } from "@/utils/feature";
 
 const Sidebar = ({ setIsSidebar }) => {
   return (
@@ -52,7 +49,11 @@ const Sidebar = ({ setIsSidebar }) => {
             },
           }}
         >
-          <a href={"#home"} style={linkStyles} onClick={() => setIsSidebar(false)}>
+          <a
+            href={"#home"}
+            style={linkStyles}
+            onClick={() => setIsSidebar(false)}
+          >
             Home
           </a>
         </Box>
@@ -78,7 +79,11 @@ const Sidebar = ({ setIsSidebar }) => {
             },
           }}
         >
-          <a href={"#about"} style={linkStyles} onClick={() => setIsSidebar(false)}>
+          <a
+            href={"#about"}
+            style={linkStyles}
+            onClick={() => setIsSidebar(false)}
+          >
             About
           </a>
         </Box>
@@ -104,7 +109,11 @@ const Sidebar = ({ setIsSidebar }) => {
             },
           }}
         >
-          <a href={"#projects"} style={linkStyles} onClick={() => setIsSidebar(false)}>
+          <a
+            href={"#projects"}
+            style={linkStyles}
+            onClick={() => setIsSidebar(false)}
+          >
             Projects
           </a>
         </Box>
@@ -130,11 +139,15 @@ const Sidebar = ({ setIsSidebar }) => {
             },
           }}
         >
-          <a href={"#contact"} style={linkStyles} onClick={() => setIsSidebar(false)}>
+          <a
+            href={"#contact"}
+            style={linkStyles}
+            onClick={() => setIsSidebar(false)}
+          >
             Contact
           </a>
         </Box>
-        <DownloadPurpleButton to={"/about"}>
+        <DownloadPurpleButton to={"/about"} onClick={DownloadResume}>
           Download CV <FileCopyOutlinedIcon style={{ fontSize: ".9rem" }} />
         </DownloadPurpleButton>
       </Stack>

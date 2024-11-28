@@ -1,23 +1,26 @@
-import { FileCopyOutlined as FileCopyOutlinedIcon, Menu as MenuIcon } from "@mui/icons-material";
+import {
+  FileCopyOutlined as FileCopyOutlinedIcon,
+  Menu as MenuIcon,
+} from "@mui/icons-material";
 import {
   Backdrop,
   Box,
   IconButton,
   Toolbar,
   Tooltip,
-  Typography
+  Typography,
 } from "@mui/material";
 import React, { Suspense, useState } from "react";
-import { blueGreen, textDark } from "../../constants/colors";
-import { CurvedButton } from "../styles/StyledComponents";
-import Sidebar from "../dialogs/Sidebar.jsx";
+import { blueGreen, textDark } from "@/constants/colors";
+import { CurvedButton } from "@/components/styles/StyledComponents";
+import Sidebar from "@/components/dialogs/Sidebar.jsx";
+import { DownloadResume } from "@/utils/feature";
 
 const Navbar = () => {
-
-  const [isSidebar, setIsSidebar] = useState(false)
+  const [isSidebar, setIsSidebar] = useState(false);
   const sidebarHandler = () => {
-    setIsSidebar(!isSidebar)
-  }
+    setIsSidebar(!isSidebar);
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }} height={"10vh"} id="home">
@@ -26,62 +29,100 @@ const Navbar = () => {
           display: "flex",
           justifyContent: {
             xs: "space-between",
-            md: "space-around"
+            md: "space-around",
           },
           alignItems: "flex-end",
           padding: {
             xs: "0 5vw",
-            md: "0vw"
-          }
+            md: "0vw",
+          },
         }}
       >
-        <Typography variant="h6" color={blueGreen} fontFamily={"Gilroy"} sx={{
-          userSelect: "none"
-        }}>
+        <Typography
+          variant="h6"
+          color={blueGreen}
+          fontFamily={"Gilroy"}
+          sx={{
+            userSelect: "none",
+          }}
+        >
           Shadab Mahtabi.
         </Typography>
-        <Box display={{
-          xs: "none",
-          md: "flex"
-        }} gap={"1vw"}>
-          <a href="#home" style={{
-            textDecoration: "none", 
-            color: textDark
-          }}>Home</a>
-          <a href="#about" style={{
-            textDecoration: "none", 
-            color: textDark
-          }}>About</a>
-          <a href="#projects" style={{
-            textDecoration: "none",
-            color: textDark
-          }}>Projects</a>
-          <a href="#contact" style={{
-            textDecoration: "none", 
-            color: textDark
-          }}>Contact</a>
+        <Box
+          display={{
+            xs: "none",
+            md: "flex",
+          }}
+          gap={"1vw"}
+        >
+          <a
+            href="#home"
+            style={{
+              textDecoration: "none",
+              color: textDark,
+            }}
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            style={{
+              textDecoration: "none",
+              color: textDark,
+            }}
+          >
+            About
+          </a>
+          <a
+            href="#projects"
+            style={{
+              textDecoration: "none",
+              color: textDark,
+            }}
+          >
+            Projects
+          </a>
+          <a
+            href="#contact"
+            style={{
+              textDecoration: "none",
+              color: textDark,
+            }}
+          >
+            Contact
+          </a>
         </Box>
-        <Box display={{ xs: "none", md: "block" }}><CurvedButton>Download CV <FileCopyOutlinedIcon style={{ fontSize: ".9rem" }}/></CurvedButton></Box>
-        <Box display={{ xs: "block", md: "none" }}><IconBtn title={"Menu"} icon={<MenuIcon />} onClick={sidebarHandler}/></Box>
+        <Box display={{ xs: "none", md: "block" }}>
+          <CurvedButton onClick={DownloadResume}>
+            Download CV <FileCopyOutlinedIcon style={{ fontSize: ".9rem" }} />
+          </CurvedButton>
+        </Box>
+        <Box display={{ xs: "block", md: "none" }}>
+          <IconBtn
+            title={"Menu"}
+            icon={<MenuIcon />}
+            onClick={sidebarHandler}
+          />
+        </Box>
       </Toolbar>
 
       {isSidebar && (
         <Suspense fallback={<Backdrop open />}>
-          <Sidebar setIsSidebar={setIsSidebar}/>
+          <Sidebar setIsSidebar={setIsSidebar} />
         </Suspense>
       )}
     </Box>
   );
 };
 
-const IconBtn = ({title, icon, onClick}) => {
+const IconBtn = ({ title, icon, onClick }) => {
   return (
     <Tooltip title={title}>
       <IconButton color="inherit" size="large" onClick={onClick}>
         {icon}
       </IconButton>
     </Tooltip>
-  )
-}
+  );
+};
 
 export default Navbar;

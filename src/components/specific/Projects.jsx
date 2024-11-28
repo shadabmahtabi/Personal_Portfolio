@@ -1,8 +1,7 @@
 import { CardTravelRounded as CardTravelRoundedIcon, GroupRounded as GroupRoundedIcon, LinkOutlined as LinkOutlinedIcon, StarRounded as StarRoundedIcon } from "@mui/icons-material";
 import { Box, Paper, Typography } from "@mui/material";
-import React from "react";
-import { blueGreen, purpleBtn, white } from "../../constants/colors";
-import { ProjectLinks } from "../styles/StyledComponents";
+import { blueGreen, purpleBtn, white } from "@/constants/colors";
+import { ProjectLinks } from "@/components/styles/StyledComponents";
 
 const Projects = () => {
   return (
