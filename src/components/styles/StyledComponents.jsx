@@ -1,12 +1,11 @@
-import { Box, styled } from "@mui/material";
 import {
-  blueGreen,
   greyBtnColor,
   purpleBtn,
   purpleBtnHover,
   textDark,
-  white,
+  white
 } from "@/constants/colors";
+import { Box, styled } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export const CurvedButton = styled("button")({
@@ -52,6 +51,28 @@ export const DownloadPurpleButton = styled(Link)({
 });
 
 export const NavLinks = styled(Link)({
+  width: "80%",
+  height: "7vh",
+  // fontSize: ".9rem",
+  cursor: "pointer",
+  color: textDark,
+  textDecoration: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: ".5rem",
+  fontFamily: "gilroy",
+  fontWeight: "500",
+  transition: ".5s",
+  borderRadius: "1vh",
+  fontSize: "1.3rem",
+  "&:hover": {
+    backgroundColor: purpleBtn,
+    color: white,
+  },
+});
+
+export const SidebarLinks = styled(Link)({
   width: "80%",
   height: "7vh",
   // fontSize: ".9rem",
@@ -121,3 +142,23 @@ export const InputBox = styled('input')({
   padding: "0 3rem",
   borderRadius: "1.5rem",
 })
+
+export const ProjectLinks = styled(Link)({
+  cursor: "pointer",
+  // color: textDark,
+  textDecoration: "underline",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: ".5rem",
+  fontFamily: "gilroy",
+  fontWeight: "500",
+  transition: ".5s",
+  borderRadius: "1vh",
+  fontSize: "1rem",
+  
+  "&:hover": {
+    backgroundColor: purpleBtn,
+    color: white,
+  },
+});

@@ -26,7 +26,7 @@ const Aboutme = () => {
       display={"flex"}
       alignItems={"center"}
       flexDirection={"column"}
-      gap={"4vh"}
+      gap={"5vh"}
     >
       <Typography
         variant="h5"

@@ -1,22 +1,18 @@
-import {
-  Box,
-  Button,
-  IconButton,
-  Input,
-  Paper,
-  TextField,
-  Typography,
-} from "@mui/material";
-import React from "react";
 import { purpleBtn, textDark, white } from "@/constants/colors";
 import {
   EmailOutlined as EmailOutlinedIcon,
   PhoneOutlined as PhoneOutlinedIcon,
-  Send as SendIcon,
   SendRounded as SendRoundedIcon,
-  TurnRightRounded as TurnRightRoundedIcon,
+  TurnRightRounded as TurnRightRoundedIcon
 } from "@mui/icons-material";
-import { InputBox } from "../styles/StyledComponents";
+import {
+  Box,
+  Button,
+  Paper,
+  TextField,
+  Typography
+} from "@mui/material";
+import React from "react";
 import { purpleBtnHover } from "../../constants/colors";
 
 const GetInTouch = () => {
@@ -33,13 +29,13 @@ const GetInTouch = () => {
       }}
       fontFamily={"Gilroy"}
       padding={{
-        xs: "2vh 0",
-        md: "2vh 0 1vh 0",
+        xs: "4vh 0",
+        md: "2vh 0 3vh 0",
       }}
       display={"flex"}
       alignItems={"center"}
       flexDirection={"column"}
-      gap={"3vh"}
+      gap={"2vh"}
     >
       <Typography
         variant="h5"
@@ -93,6 +89,7 @@ const GetInTouch = () => {
         }}
         justifyContent={"center"}
         gap={"5vw"}
+        marginTop={"3vh"}
       >
         <Paper
           elevation={3}

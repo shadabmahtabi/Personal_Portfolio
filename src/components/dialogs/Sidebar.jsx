@@ -1,8 +1,12 @@
-import { DownloadPurpleButton, NavLinks } from "@/components/styles/StyledComponents.jsx";
+import {
+  DownloadPurpleButton,
+  NavLinks,
+} from "@/components/styles/StyledComponents.jsx";
 import { blueGreen } from "@/constants/colors.js";
 import { FileCopyOutlined as FileCopyOutlinedIcon } from "@mui/icons-material";
-import { Drawer, Stack, Typography } from "@mui/material";
+import { Box, Drawer, Stack, Typography } from "@mui/material";
 import React from "react";
+import { purpleBtn, textDark, white } from "../../constants/colors";
 
 const Sidebar = ({ setIsSidebar }) => {
   return (
@@ -26,18 +30,126 @@ const Sidebar = ({ setIsSidebar }) => {
         alignItems={"center"}
         paddingTop={"1vh"}
       >
-        <NavLinks to={"#home"}>Home</NavLinks>
-        <NavLinks to={"#about"}>About</NavLinks>
-        <NavLinks to={"#projects"}>Projects</NavLinks>
-        <NavLinks to={"#contact"}>Contact</NavLinks>
-        <DownloadPurpleButton
-          to={"/about"}
+        <Box
+          sx={{
+            width: "80%",
+            height: "7vh",
+            cursor: "pointer",
+            color: textDark,
+            textDecoration: "none",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: ".5rem",
+            fontFamily: "gilroy",
+            fontWeight: "500",
+            transition: ".5s",
+            borderRadius: "1vh",
+            fontSize: "1.3rem",
+            "&:hover": {
+              backgroundColor: purpleBtn,
+              color: white,
+            },
+          }}
         >
+          <a href={"#home"} style={linkStyles} onClick={() => setIsSidebar(false)}>
+            Home
+          </a>
+        </Box>
+        <Box
+          sx={{
+            width: "80%",
+            height: "7vh",
+            cursor: "pointer",
+            color: textDark,
+            textDecoration: "none",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: ".5rem",
+            fontFamily: "gilroy",
+            fontWeight: "500",
+            transition: ".5s",
+            borderRadius: "1vh",
+            fontSize: "1.3rem",
+            "&:hover": {
+              backgroundColor: purpleBtn,
+              color: white,
+            },
+          }}
+        >
+          <a href={"#about"} style={linkStyles} onClick={() => setIsSidebar(false)}>
+            About
+          </a>
+        </Box>
+        <Box
+          sx={{
+            width: "80%",
+            height: "7vh",
+            cursor: "pointer",
+            color: textDark,
+            textDecoration: "none",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: ".5rem",
+            fontFamily: "gilroy",
+            fontWeight: "500",
+            transition: ".5s",
+            borderRadius: "1vh",
+            fontSize: "1.3rem",
+            "&:hover": {
+              backgroundColor: purpleBtn,
+              color: white,
+            },
+          }}
+        >
+          <a href={"#projects"} style={linkStyles} onClick={() => setIsSidebar(false)}>
+            Projects
+          </a>
+        </Box>
+        <Box
+          sx={{
+            width: "80%",
+            height: "7vh",
+            cursor: "pointer",
+            color: textDark,
+            textDecoration: "none",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: ".5rem",
+            fontFamily: "gilroy",
+            fontWeight: "500",
+            transition: ".5s",
+            borderRadius: "1vh",
+            fontSize: "1.3rem",
+            "&:hover": {
+              backgroundColor: purpleBtn,
+              color: white,
+            },
+          }}
+        >
+          <a href={"#contact"} style={linkStyles} onClick={() => setIsSidebar(false)}>
+            Contact
+          </a>
+        </Box>
+        <DownloadPurpleButton to={"/about"}>
           Download CV <FileCopyOutlinedIcon style={{ fontSize: ".9rem" }} />
         </DownloadPurpleButton>
       </Stack>
     </Drawer>
   );
+};
+
+let linkStyles = {
+  height: "100%",
+  width: "100%",
+  textDecoration: "none",
+  color: "inherit",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 };
 
 export default Sidebar;
