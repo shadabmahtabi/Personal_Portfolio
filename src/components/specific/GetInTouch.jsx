@@ -11,6 +11,7 @@ import ContactForm from "@/components/Forms/ContactForm";
 const GetInTouch = () => {
   return (
     <Box
+      data-aos="fade-up"
       width={"100%"}
       id="contact"
       minHeight={{
@@ -83,6 +84,7 @@ const GetInTouch = () => {
         marginTop={"3vh"}
       >
         <Paper
+          data-aos="fade-right"
           elevation={2}
           variant="elevation"
           sx={{
@@ -151,6 +153,7 @@ const GetInTouch = () => {
           </Typography>
         </Paper>
         <Paper
+          data-aos="fade-left"
           elevation={2}
           variant="elevation"
           sx={{

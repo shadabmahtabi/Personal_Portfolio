@@ -6,7 +6,7 @@ import {
   purpleBtn,
   purpleBtnHover,
   textDark,
-  white
+  white,
 } from "@/constants/colors";
 import { DownloadResume } from "@/utils/feature";
 import {
@@ -14,7 +14,7 @@ import {
   GitHub as GitHubIcon,
   Instagram as InstagramIcon,
   LinkedIn as LinkedInIcon,
-  Twitter as TwitterIcon
+  Twitter as TwitterIcon,
 } from "@mui/icons-material";
 import {
   Box,
@@ -73,6 +73,9 @@ const LandingPage = () => {
             height={"100%"}
           >
             <Button
+              data-aos="fade-right"
+              data-aos-delay="400"
+              // data-aos-duration="500"
               variant="contained"
               color="warning"
               size="small"
@@ -83,6 +86,9 @@ const LandingPage = () => {
               Shadab Mahtabi
             </Button>
             <Typography
+              data-aos="fade-left"
+              data-aos-delay="500"
+              // data-aos-duration="500"
               variant="text"
               color={textDark}
               fontFamily={"gilroy, sans serif"}
@@ -107,7 +113,11 @@ const LandingPage = () => {
                 Youtuber
               </span>
             </Typography>
-            <p>
+            <p
+              data-aos="fade-right"
+              data-aos-delay="600"
+              // data-aos-duration="500"
+            >
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
               perferendis dignissimos nam officiis deleniti nihil consectetur
               assumenda doloribus exercitationem voluptates.
@@ -128,6 +138,10 @@ const LandingPage = () => {
               }}
             >
               <Box
+                data-aos="fade-left"
+                data-aos-delay="500"
+                data-aos-offset="50"
+                // data-aos-duration="500"
                 component={Link}
                 to={"/about"}
                 sx={{
@@ -147,7 +161,12 @@ const LandingPage = () => {
               >
                 Hire Me
               </Box>
-              <DownloadPurpleButton onClick={DownloadResume}>
+              <DownloadPurpleButton
+                data-aos="fade-left"
+                data-aos-delay="600"
+                data-aos-offset="50"
+                onClick={DownloadResume}
+              >
                 Download CV{" "}
                 <FileCopyOutlinedIcon style={{ fontSize: ".9rem" }} />
               </DownloadPurpleButton>
@@ -163,22 +182,45 @@ const LandingPage = () => {
               gap={"1vw"}
               marginTop={"4vh"}
             >
-              <Link>
+              <Link
+                data-aos="zoom-in"
+                data-aos-delay="500"
+                data-aos-duration="800"
+                data-aos-offset="50"
+              >
                 <IconBtn title={"Instagram"} icon={<InstagramIcon />} />
               </Link>
-              <Link>
+              <Link
+                data-aos="zoom-in"
+                data-aos-delay="600"
+                data-aos-duration="800"
+                data-aos-offset="50"
+              >
                 <IconBtn title={"LinkedIn"} icon={<LinkedInIcon />} />
               </Link>
-              <Link>
+              <Link
+                data-aos="zoom-in"
+                data-aos-delay="700"
+                data-aos-duration="800"
+                data-aos-offset="50"
+              >
                 <IconBtn title={"Twitter"} icon={<TwitterIcon />} />
               </Link>
-              <Link>
+              <Link
+                data-aos="zoom-in"
+                data-aos-delay="800"
+                data-aos-duration="800"
+                data-aos-offset="50"
+              >
                 <IconBtn title={"Github"} icon={<GitHubIcon />} />
               </Link>
             </Box>
           </Stack>
         </Box>
         <Box
+          data-aos="zoom-in"
+          data-aos-delay="900"
+          data-aos-duration="500"
           height={{
             xs: "35%",
             md: "100%",

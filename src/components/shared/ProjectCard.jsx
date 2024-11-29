@@ -3,9 +3,12 @@ import { purpleBtn, white } from "@/constants/colors";
 import { LinkOutlined as LinkOutlinedIcon } from "@mui/icons-material";
 import { Paper, Typography } from "@mui/material";
 
-const ProjectCard = ({ icon, title, desc, link }) => {
+const ProjectCard = ({ icon, title, desc, link, aosDelay }) => {
   return (
     <Paper
+      data-aos="fade-down-right"
+      data-aos-delay={aosDelay}
+      data-aos-offset="100"
       elevation={2}
       variant="elevation"
       sx={{
@@ -32,14 +35,17 @@ const ProjectCard = ({ icon, title, desc, link }) => {
           top: 0,
           left: 0,
           width: "100%",
-          height: "0%",
+          height: "100%",
           backgroundColor: purpleBtn,
           zIndex: 0,
-          transition: "height 0.4s ease-in-out",
+          transform: "scaleY(0)",
+          transformOrigin: "top",
+          transition: "transform .5s ease-in-out",
         },
 
         "&:hover::before": {
-          height: "100%",
+          transform: "scaleY(1)",
+          transformOrigin: "bottom",
         },
 
         "& > *": {

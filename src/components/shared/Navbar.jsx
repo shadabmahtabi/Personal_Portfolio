@@ -23,7 +23,13 @@ const Navbar = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }} height={"10vh"} id="home">
+    <Box
+      data-aos="fade-down"
+      data-aos-duration="400"
+      sx={{ flexGrow: 1 }}
+      height={"10vh"}
+      id="home"
+    >
       <Toolbar
         sx={{
           display: "flex",
@@ -62,21 +68,24 @@ const Navbar = () => {
               transition: ".3s",
               position: "relative",
               padding: "0 .5vw",
-              
+
               "&::after": {
                 content: '""',
                 position: "absolute",
                 bottom: "0",
                 left: "0",
                 height: "2px",
-                width: "0%",
                 borderRadius: "10px",
                 backgroundColor: purpleBtn,
-                transition: "width .3s",
+                width: "100%",
+                transform: "scaleX(0)",
+                transformOrigin: "right",
+                transition: "transform 0.3s ease",
               },
 
               "&:hover::after": {
-                width: "100%"
+                transform: "scaleX(1)",
+                transformOrigin: "left",
               },
 
               "&:hover": {
@@ -101,21 +110,24 @@ const Navbar = () => {
               transition: ".3s",
               position: "relative",
               padding: "0 .5vw",
-              
+
               "&::after": {
                 content: '""',
                 position: "absolute",
                 bottom: "0",
                 left: "0",
                 height: "2px",
-                width: "0%",
                 borderRadius: "10px",
                 backgroundColor: purpleBtn,
-                transition: "width .3s",
+                width: "100%",
+                transform: "scaleX(0)",
+                transformOrigin: "right",
+                transition: "transform 0.3s ease",
               },
 
               "&:hover::after": {
-                width: "100%"
+                transform: "scaleX(1)",
+                transformOrigin: "left",
               },
 
               "&:hover": {
@@ -140,21 +152,24 @@ const Navbar = () => {
               transition: ".3s",
               position: "relative",
               padding: "0 .5vw",
-              
+
               "&::after": {
                 content: '""',
                 position: "absolute",
                 bottom: "0",
                 left: "0",
                 height: "2px",
-                width: "0%",
                 borderRadius: "10px",
                 backgroundColor: purpleBtn,
-                transition: "width .3s",
+                width: "100%",
+                transform: "scaleX(0)",
+                transformOrigin: "right",
+                transition: "transform 0.3s ease",
               },
 
               "&:hover::after": {
-                width: "100%"
+                transform: "scaleX(1)",
+                transformOrigin: "left",
               },
 
               "&:hover": {
@@ -180,21 +195,24 @@ const Navbar = () => {
               transition: ".3s",
               position: "relative",
               padding: "0 .5vw",
-              
+
               "&::after": {
                 content: '""',
                 position: "absolute",
                 bottom: "0",
                 left: "0",
                 height: "2px",
-                width: "0%",
                 borderRadius: "10px",
                 backgroundColor: purpleBtn,
-                transition: "width .3s",
+                width: "100%",
+                transform: "scaleX(0)",
+                transformOrigin: "right",
+                transition: "transform 0.3s ease",
               },
 
               "&:hover::after": {
-                width: "100%"
+                transform: "scaleX(1)",
+                transformOrigin: "left",
               },
 
               "&:hover": {

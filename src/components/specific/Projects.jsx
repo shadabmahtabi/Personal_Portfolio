@@ -3,13 +3,14 @@ import { blueGreen, purpleBtn } from "@/constants/colors";
 import {
   CardTravelRounded as CardTravelRoundedIcon,
   GroupRounded as GroupRoundedIcon,
-  StarRounded as StarRoundedIcon
+  StarRounded as StarRoundedIcon,
 } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
 
 const Projects = () => {
   return (
     <Box
+      data-aos="fade-up"
       width={"100%"}
       minHeight={{
         xs: "0vh",
@@ -82,8 +83,10 @@ const Projects = () => {
           title={"Completed"}
           desc={"15+ Completed Projects"}
           link={"/projects"}
+          aosDelay={"500"}
         />
         <ProjectCard
+          data-aos="fade-down-right"
           icon={
             <GroupRoundedIcon
               sx={{
@@ -95,8 +98,10 @@ const Projects = () => {
           title={"Clients"}
           desc={"50+ Happy Clients"}
           link={"/clients"}
+          aosDelay={"600"}
         />
         <ProjectCard
+          data-aos="fade-down-right"
           icon={
             <StarRoundedIcon
               sx={{
@@ -108,6 +113,7 @@ const Projects = () => {
           title={"Experienced"}
           desc={"5+ Years Of Experienced"}
           link={"/experience"}
+          aosDelay={"700"}
         />
       </Box>
     </Box>

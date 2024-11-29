@@ -9,6 +9,7 @@ import { DownloadResume } from "@/utils/feature";
 const Aboutme = () => {
   return (
     <Box
+      data-aos="fade-up"
       width={"100%"}
       minHeight={{
         xs: "100vh",
@@ -74,6 +75,9 @@ const Aboutme = () => {
         }}
       >
         <Paper
+          data-aos="zoom-in"
+          data-aos-dalay="700"
+          data-aos-offset="200"
           elevation={2}
           variant="elevation"
           sx={{
@@ -118,7 +122,7 @@ const Aboutme = () => {
             consectetur adipisicing elit. Quasi, corporis.
           </Typography>
           <DownloadPurpleButton
-            onClick={ DownloadResume }
+            onClick={DownloadResume}
             style={{
               marginLeft: "auto",
             }}
@@ -127,6 +131,9 @@ const Aboutme = () => {
           </DownloadPurpleButton>
         </Paper>
         <Box
+          data-aos="zoom-in"
+          data-aos-dalay="700"
+          data-aos-offset="200"
           width={{
             xs: "95%",
             md: "45%",

@@ -9,6 +9,8 @@ const Sidebar = ({ setIsSidebar }) => {
   return (
     <Drawer open onClose={() => setIsSidebar(false)}>
       <Typography
+        data-aos="fade-up-right"
+        data-aos-delay="700"
         variant="h6"
         color={blueGreen}
         height={"10vh"}
@@ -21,15 +23,15 @@ const Sidebar = ({ setIsSidebar }) => {
         Shadab Mahtabi.
       </Typography>
       <Stack
+        data-aos="fade-up-right"
         width={"80vw"}
         height={"90vh"}
         gap={"2vh"}
         alignItems={"center"}
         padding={"3vh"}
+        overflow={"hidden"}
       >
-        <Box
-          sx={linkBoxStyles}
-        >
+        <Box data-aos="fade-up-right" data-aos-delay="600" sx={linkBoxStyles}>
           <a
             href={"#home"}
             style={linkStyles}
@@ -38,9 +40,7 @@ const Sidebar = ({ setIsSidebar }) => {
             Home
           </a>
         </Box>
-        <Box
-          sx={linkBoxStyles}
-        >
+        <Box data-aos="fade-up-right" data-aos-delay="500" sx={linkBoxStyles}>
           <a
             href={"#about"}
             style={linkStyles}
@@ -49,9 +49,7 @@ const Sidebar = ({ setIsSidebar }) => {
             About
           </a>
         </Box>
-        <Box
-          sx={linkBoxStyles}
-        >
+        <Box data-aos="fade-up-right" data-aos-delay="400" sx={linkBoxStyles}>
           <a
             href={"#projects"}
             style={linkStyles}
@@ -60,9 +58,7 @@ const Sidebar = ({ setIsSidebar }) => {
             Projects
           </a>
         </Box>
-        <Box
-          sx={linkBoxStyles}
-        >
+        <Box data-aos="fade-up-right" data-aos-delay="300" sx={linkBoxStyles}>
           <a
             href={"#contact"}
             style={linkStyles}
@@ -71,9 +67,13 @@ const Sidebar = ({ setIsSidebar }) => {
             Contact
           </a>
         </Box>
-        <DownloadPurpleButton to={"/about"} onClick={DownloadResume} sx={{
-          marginTop: "auto"
-        }}>
+        <DownloadPurpleButton
+          to={"/about"}
+          onClick={DownloadResume}
+          sx={{
+            marginTop: "auto",
+          }}
+        >
           Download CV <FileCopyOutlinedIcon style={{ fontSize: ".9rem" }} />
         </DownloadPurpleButton>
       </Stack>
@@ -110,6 +110,6 @@ let linkBoxStyles = {
     backgroundColor: purpleBtn,
     color: white,
   },
-}
+};
 
 export default Sidebar;
