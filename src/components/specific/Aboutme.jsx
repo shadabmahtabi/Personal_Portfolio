@@ -1,10 +1,13 @@
-import { Box, Paper, Typography } from "@mui/material";
-import React from "react";
-import { DownloadPurpleButton } from "@/components/styles/StyledComponents";
-import { FileCopyOutlined as FileCopyOutlinedIcon } from "@mui/icons-material";
-import { lightWhite, mildWhite, purpleBtn } from "@/constants/colors";
-import { Skills, SkillsBox } from "@/components/styles/StyledComponents";
+import {
+  DownloadPurpleButton,
+  Skills,
+  SkillsBox,
+} from "@/components/styles/StyledComponents";
+import { purpleBtn } from "@/constants/colors";
 import { DownloadResume } from "@/utils/feature";
+import { FileCopyOutlined as FileCopyOutlinedIcon } from "@mui/icons-material";
+import { Box, Paper, Typography } from "@mui/material";
+import { skills } from "@/constants/sampleData";
 
 const Aboutme = () => {
   return (
@@ -166,15 +169,9 @@ const Aboutme = () => {
               Front-end
             </Typography>
             <SkillsBox>
-              <Skills>HTML</Skills>
-              <Skills>CSS</Skills>
-              <Skills>JavaScript</Skills>
-              <Skills>ReactJs</Skills>
-              <Skills>GSAP</Skills>
-              <Skills>TailwindCSS</Skills>
-              <Skills>MaterialUI</Skills>
-              <Skills>NextJs</Skills>
-              <Skills>LocomotiveJs</Skills>
+              {skills.frontend.map((skill) => {
+                return <Skills key={skill}>{skill}</Skills>;
+              })}
             </SkillsBox>
           </Box>
           <Box height={"100%"} width={"30%"}>
@@ -191,17 +188,9 @@ const Aboutme = () => {
               Back-end
             </Typography>
             <SkillsBox>
-              <Skills>NodeJs</Skills>
-              <Skills>ExpressJs</Skills>
-              <Skills>Git</Skills>
-              <Skills>Github</Skills>
-              <Skills>SQL</Skills>
-              <Skills>AI</Skills>
-              <Skills>WebSockets</Skills>
-              <Skills>Postman</Skills>
-              <Skills>Django</Skills>
-              <Skills>RESTful API</Skills>
-              <Skills>NodeJs</Skills>
+              {skills.backend.map((skill) => {
+                return <Skills key={skill}>{skill}</Skills>;
+              })}
             </SkillsBox>
           </Box>
           <Box height={"100%"} width={"30%"}>
@@ -218,12 +207,9 @@ const Aboutme = () => {
               Database
             </Typography>
             <SkillsBox>
-              <Skills>MySQL</Skills>
-              <Skills>MongoDB</Skills>
-              <Skills>Redis</Skills>
-              <Skills>Firebase</Skills>
-              <Skills>Postgres</Skills>
-              <Skills>AWS</Skills>
+              {skills.database.map((skill) => {
+                return <Skills key={skill}>{skill}</Skills>;
+              })}
             </SkillsBox>
           </Box>
         </Box>

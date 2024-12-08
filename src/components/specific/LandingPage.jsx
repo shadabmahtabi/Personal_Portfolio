@@ -188,7 +188,7 @@ const LandingPage = () => {
                 data-aos-duration="800"
                 data-aos-offset="50"
               >
-                <IconBtn title={"Instagram"} icon={<InstagramIcon />} />
+                <IconBtn title={"Instagram"} icon={<InstagramIcon />} link={import.meta.env.VITE_INSTA_LINK} />
               </Link>
               <Link
                 data-aos="zoom-in"
@@ -196,7 +196,7 @@ const LandingPage = () => {
                 data-aos-duration="800"
                 data-aos-offset="50"
               >
-                <IconBtn title={"LinkedIn"} icon={<LinkedInIcon />} />
+                <IconBtn title={"LinkedIn"} icon={<LinkedInIcon />} link={import.meta.env.VITE_LINKEDIN_LINK} />
               </Link>
               <Link
                 data-aos="zoom-in"
@@ -204,7 +204,7 @@ const LandingPage = () => {
                 data-aos-duration="800"
                 data-aos-offset="50"
               >
-                <IconBtn title={"Twitter"} icon={<TwitterIcon />} />
+                <IconBtn title={"Twitter"} icon={<TwitterIcon />} link={import.meta.env.VITE_X_LINK} />
               </Link>
               <Link
                 data-aos="zoom-in"
@@ -212,7 +212,7 @@ const LandingPage = () => {
                 data-aos-duration="800"
                 data-aos-offset="50"
               >
-                <IconBtn title={"Github"} icon={<GitHubIcon />} />
+                <IconBtn title={"Github"} icon={<GitHubIcon />} link={import.meta.env.VITE_GITHUB_LINK} />
               </Link>
             </Box>
           </Stack>
@@ -281,44 +281,17 @@ const LandingPage = () => {
             />
           </Box>
         </Box>
-      </Box>
-      {/* <Box
-        width={"100%"}
-        height={"8%"}
-        display={{
-          xs: "none",
-          sm: "flex"
-        }}
-        // alignItems={"center"}
-        justifyContent={"center"}
-      >
-        <Box
-          height={{
-            xs: "70%",
-            md: "80%"
-          }}
-          width={{
-            xs: "25vh",
-            md: "30vh"
-          }}
-          bgcolor={greyBtnColor}
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          gap={"1vh"}
-          color={textDark}
-          borderRadius={"5vh"}
-          // border={"1px solid #000"}
-          boxShadow={"1px 1px 3px #e3e3e3"}
-        >
-          Scroll Down <MouseIcon />
-        </Box>
-      </Box> */}
+      </Box>x
     </Box>
   );
 };
 
-const IconBtn = ({ title, icon }) => {
+const IconBtn = ({ title, icon, link }) => {
+  const HandleLink = (link) => {
+    console.log(link)
+    window.open(link, "_self");
+  }
+  console.log(link)
   return (
     <Tooltip title={title}>
       <IconButton
@@ -329,6 +302,7 @@ const IconBtn = ({ title, icon }) => {
           // bgcolor: greyBtnColor,
           padding: ".6vw",
         }}
+        onClick={() => HandleLink(link)}
       >
         {icon}
       </IconButton>
