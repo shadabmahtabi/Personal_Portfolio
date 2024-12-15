@@ -328,9 +328,12 @@ const LandingPage = () => {
 const IconBtn = ({ title, icon, link }) => {
   const HandleLink = (link) => {
     // console.log(link);
-    window.open(link, "_self");
+    // window.open(link, "_self");
+    const linkEl = document.createElement("a");
+    linkEl.href = link;
+    linkEl.click();
   };
-  
+
   return (
     <Tooltip title={title}>
       <IconButton
