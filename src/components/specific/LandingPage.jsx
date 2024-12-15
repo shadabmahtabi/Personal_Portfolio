@@ -24,9 +24,32 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import Typed from "typed.js";
 
 const LandingPage = () => {
+  const textSpan = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(textSpan.current, {
+      strings: [
+        "Developer",
+        "Youtuber",
+        "Designer",
+        // "Engineer",
+        // "Problem Solver",
+      ],
+      typeSpeed: 70,
+      backSpeed: 70,
+      loop: true,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <Box
       width={"100%"}
@@ -109,9 +132,8 @@ const LandingPage = () => {
                 style={{
                   color: blueGreen,
                 }}
-              >
-                Youtuber
-              </span>
+                ref={textSpan}
+              ></span>
             </Typography>
             <p
               data-aos="fade-right"
@@ -188,7 +210,11 @@ const LandingPage = () => {
                 data-aos-duration="800"
                 data-aos-offset="50"
               >
-                <IconBtn title={"Instagram"} icon={<InstagramIcon />} link={import.meta.env.VITE_INSTA_LINK} />
+                <IconBtn
+                  title={"Instagram"}
+                  icon={<InstagramIcon />}
+                  link={import.meta.env.VITE_INSTA_LINK}
+                />
               </Link>
               <Link
                 data-aos="zoom-in"
@@ -196,7 +222,11 @@ const LandingPage = () => {
                 data-aos-duration="800"
                 data-aos-offset="50"
               >
-                <IconBtn title={"LinkedIn"} icon={<LinkedInIcon />} link={import.meta.env.VITE_LINKEDIN_LINK} />
+                <IconBtn
+                  title={"LinkedIn"}
+                  icon={<LinkedInIcon />}
+                  link={import.meta.env.VITE_LINKEDIN_LINK}
+                />
               </Link>
               <Link
                 data-aos="zoom-in"
@@ -204,7 +234,11 @@ const LandingPage = () => {
                 data-aos-duration="800"
                 data-aos-offset="50"
               >
-                <IconBtn title={"Twitter"} icon={<TwitterIcon />} link={import.meta.env.VITE_X_LINK} />
+                <IconBtn
+                  title={"Twitter"}
+                  icon={<TwitterIcon />}
+                  link={import.meta.env.VITE_X_LINK}
+                />
               </Link>
               <Link
                 data-aos="zoom-in"
@@ -212,7 +246,11 @@ const LandingPage = () => {
                 data-aos-duration="800"
                 data-aos-offset="50"
               >
-                <IconBtn title={"Github"} icon={<GitHubIcon />} link={import.meta.env.VITE_GITHUB_LINK} />
+                <IconBtn
+                  title={"Github"}
+                  icon={<GitHubIcon />}
+                  link={import.meta.env.VITE_GITHUB_LINK}
+                />
               </Link>
             </Box>
           </Stack>
@@ -281,17 +319,18 @@ const LandingPage = () => {
             />
           </Box>
         </Box>
-      </Box>x
+      </Box>
+      x
     </Box>
   );
 };
 
 const IconBtn = ({ title, icon, link }) => {
   const HandleLink = (link) => {
-    console.log(link)
+    // console.log(link);
     window.open(link, "_self");
-  }
-  console.log(link)
+  };
+  
   return (
     <Tooltip title={title}>
       <IconButton

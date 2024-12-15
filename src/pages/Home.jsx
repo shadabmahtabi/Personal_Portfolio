@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     AOS.init({
       once: false,
-      offset: 200,
+      offset: 100,
       mirror: false,
       duration: 500,
       easing: "ease-in-out"
